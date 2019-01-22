@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 mongoose.Promise = global.Promise;
 mongoose.connect(
-    "mongodb://localhost:27017/TodoApp",
+    process.send.MONGODB_URI || "mongodb://localhost:27017/TodoApp",
     {
         useMongoClient: true,
     },
